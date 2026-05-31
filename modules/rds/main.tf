@@ -37,7 +37,7 @@ resource "aws_db_subnet_group" "main" {
 
 # RDSインスタンス（Multi-AZ）
 resource "aws_db_instance" "main" {
-  identifier        = "${var.name_prefix}-rds"
+  identifier        = "rds-${var.name_prefix}"
   engine            = "mysql"
   engine_version    = "8.0"
   instance_class    = var.db_instance_class
